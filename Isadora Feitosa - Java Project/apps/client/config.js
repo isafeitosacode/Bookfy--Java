@@ -1,0 +1,15 @@
+const environments = {
+  development: {
+    apiUrl: 'http://localhost:3000/api'
+  },
+  production: {
+    apiUrl: 'https://bookfy.onrender.com/api'
+  }
+};
+
+const isProduction = window.location.hostname.includes('onrender.com');
+const apiBaseUrl = (isProduction ? environments.production : environments.development).apiUrl;
+
+
+export const API_BASE_URL = 'http://localhost:8080/api';
+export const GOOGLE_API_URL = 'https://www.googleapis.com/books/v1/volumes';
